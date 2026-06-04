@@ -29,3 +29,13 @@ resource "azurerm_subnet" "subnet3" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes = [ "10.0.3.0/24" ]
 }
+
+
+
+resource "azurerm_storage_account" "storage" {
+  name = "storgafe12789"
+  resource_group_name = "rg-vnet"
+  location = "centralus"
+  account_replication_type = "LRS"
+  account_tier = "Standard"
+}
